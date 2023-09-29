@@ -23,5 +23,5 @@ const discountSchema: Schema<IDiscount> = new Schema(
   }
 )
 
-export type Discount = InferSchemaType<typeof discountSchema>
+export type DiscountType = InferSchemaType<typeof discountSchema>
 export const Discount = mongoose.models.Discount || model('Discount', discountSchema)

@@ -18,5 +18,5 @@ const supplierSchema: Schema<ISupplier> = new Schema(
   }
 )
 
-export type Supplier = InferSchemaType<typeof supplierSchema>
+export type SupplierType = InferSchemaType<typeof supplierSchema>
 export const Supplier = mongoose.models.Supplier || model('Supplier', supplierSchema)
