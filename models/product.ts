@@ -1,6 +1,16 @@
-import mongoose, { Schema, InferSchemaType, model } from 'mongoose'
+import mongoose, { Schema, InferSchemaType, model, Document } from 'mongoose'
+import { Supplier } from './supplier'
+import { Discount } from './discount'
 
-const productSchema = new Schema(
+interface IProduct extends Document {
+  name: string,
+  quantity: number,
+  pricePerUnit: number,
+  supplier: typeof Supplier
+  discounts: [typeof Discount]
+}
+
+const productSchema: Schema<IProduct> = new Schema(
   {
     name: {
       type: String,
@@ -15,11 +25,11 @@ const productSchema = new Schema(
       required: true
     },
     supplier: {
-      type: Schema.ObjectId,
+      type: Supplier,
       required: true
     },
     discounts: {
-      type: [Schema.ObjectId],
+      type: [Discount],
       required: true
     }
   }

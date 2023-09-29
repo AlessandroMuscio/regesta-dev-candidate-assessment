@@ -1,6 +1,11 @@
-import mongoose, { Schema, InferSchemaType, model } from 'mongoose'
+import mongoose, { Schema, InferSchemaType, model, Document } from 'mongoose'
 
-const supplierSchema = new Schema(
+interface ISupplier extends Document {
+  name: string,
+  minDaysShipping: number
+}
+
+const supplierSchema: Schema<ISupplier> = new Schema(
   {
     name: {
       type: String,

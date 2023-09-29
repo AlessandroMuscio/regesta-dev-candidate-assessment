@@ -1,6 +1,12 @@
-import mongoose, { Schema, InferSchemaType, model } from 'mongoose'
+import mongoose, { Schema, InferSchemaType, model, Document } from 'mongoose'
 
-const discountSchema = new Schema(
+interface IDiscount extends Document {
+  type: string,
+  value: number,
+  conditions: object
+}
+
+const discountSchema: Schema<IDiscount> = new Schema(
   {
     type: {
       type: String,
