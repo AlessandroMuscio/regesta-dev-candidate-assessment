@@ -20,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <h1>Regesta Dev Candidate Assessment</h1>
+        {children}
+      </body>
     </html>
   )
 }
