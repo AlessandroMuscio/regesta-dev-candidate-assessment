@@ -152,6 +152,9 @@ export default async function SuppliersSection({ quantity, productName }: { quan
           <p>
             This supplier will give you the products for <strong>{card.cost} €</strong> in <strong>{card.minDaysShipping}</strong> shipping days.
           </p>
+          {i === 0 && (
+            <div className="pill">Cheapest!</div>
+          )}
         </div>
       ))}
     </>

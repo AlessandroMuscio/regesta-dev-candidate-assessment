@@ -121,3 +121,18 @@ form button {
 .card p {
   @apply my-4 text-sm leading-6;
 }
+
+/* pill styles */
+.pill {
+  @apply 
+    py-1 px-2 mt-3
+    inline-block 
+    text-xs font-semibold
+    bg-emerald-300 text-emerald-600;
+}
+
+.card .pill {
+  @apply 
+    absolute bottom-0 right-0 
+    rounded-tl-md;
+}
