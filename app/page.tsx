@@ -5,7 +5,7 @@ export default function Home({ searchParams }: { searchParams?: { [key: string]:
   const selected = Array.isArray(selectedSearch) ? selectedSearch[0] : selectedSearch
 
   return (
-    <main className='text-center'>
+    <main>
       <ProductForm selected={selected} />
     </main>
   )
