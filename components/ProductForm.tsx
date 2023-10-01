@@ -29,12 +29,7 @@ async function sendForm(formData: FormData) {
   let index = 0
   let query = '?'
   for (const [name, value] of formData.entries()) {
-    if (index > 0) {
-      if (index > 1)
-        query += '&'
-
-      query += `${name}=${encodeURIComponent(value.toString())}`
-    }
+    query += `${index > 0 ? '&' : ''}${name}=${encodeURIComponent(value.toString())}`
 
     index++
   }
