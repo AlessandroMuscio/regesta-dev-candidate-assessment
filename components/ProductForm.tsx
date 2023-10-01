@@ -1,7 +1,9 @@
 import { connect } from "@/utils/mongodb"
 import { ProductType, Product } from "@/models/product"
 import DropDown from "./DropDown"
+import { redirect } from 'next/navigation'
 
+// Extremely important!!
 export const dynamic = 'force-dynamic'
 
 function sortAndUnify(array: string[]): string[] {
@@ -21,15 +23,36 @@ async function getProducts(): Promise<string[]> {
   return sortAndUnify(products.map(product => product.name))
 }
 
+async function sendForm(formData: FormData) {
+  'use server'
+
+  let index = 0
+  let query = '?'
+  for (const [name, value] of formData.entries()) {
+    if (index > 0) {
+      if (index > 1)
+        query += '&'
+
+      query += `${name}=${encodeURIComponent(value.toString())}`
+    }
+
+    index++
+  }
+
+  redirect(`/search${query}`)
+}
+
 export default async function ProductForm({ selected }: { selected: string }) {
   const options = await getProducts()
 
   return (
-    <form>
+    <form action={sendForm}>
       <label>Quantity</label>
       <input type='number' name='quantity' />
       <label>Product</label>
       <DropDown selected={selected || ''} options={options} />
+      <br />
+      <button type="submit" className="btn-primary">Search</button>
     </form>
   )
 }

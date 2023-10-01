@@ -24,7 +24,7 @@ export default function DropDown({ selected, options }: { selected: string, opti
   }
 
   return (
-    <select value={selected} onChange={onSelect}>
+    <select name='productName' value={selected} onChange={onSelect}>
       <option value=''>Choose a Product</option>
       {
         options.map(option => (
