@@ -29,9 +29,11 @@ async function sendForm(formData: FormData) {
   let index = 0
   let query = '?'
   for (const [name, value] of formData.entries()) {
-    query += `${index > 0 ? '&' : ''}${name}=${encodeURIComponent(value.toString())}`
+    if (!name.includes('ACTION')) {
+      query += `${index > 0 ? '&' : ''}${name}=${encodeURIComponent(value.toString())}`
 
-    index++
+      index++
+    }
   }
 
   redirect(`/search${query}`)
