@@ -74,4 +74,4 @@ npm start
 
 Before doing this, contact me to get the '_URI_' to the **DB** that I saved in a `.env` file of course not saved in _version control_.
 
-https://github.com/AlessandroMuscio/regesta-dev-candidate-assessment/blob/main/.github/appDemo.mp4
+https://github.com/AlessandroMuscio/regesta-dev-candidate-assessment/assets/56693783/57aa2f37-2769-48a2-90de-f748f820de68
