@@ -142,7 +142,7 @@ export default async function SuppliersSection({ quantity, productName }: { quan
   return (
     <>
       {cards.length === 0 ? (
-        <div>
+        <div className="text-center">
           No supplier was found!<br />
           Try looking for another quantity or maybe check later to see if our suppliers have restocked.
         </div>
