@@ -60,7 +60,7 @@ First of all, a _select field_ is not practical if the number of products increa
 
 Secondly, right now my **DB** is hosted on a [_MongoDB Atlas_](https://www.mongodb.com/atlas/database) free server, an amazing tool that lets you host your **DB** for free, but of course being free it lacks speed so the query are a bit slow, changing to a paid plan or hosting a _MongoDB_ instance would greatly improve performance.
 
-### Usage
+## Usage
 
 If you want to try this website for yourself, it's just a matter of installing [_Node.js_](https://nodejs.org/en) and then going in the root folder of the project and running these simple commands:
 
@@ -68,10 +68,21 @@ If you want to try this website for yourself, it's just a matter of installing [
 # Install all dependencies
 npm install
 
+# Build the website
+npm run build
+
 # Start the build of the website
 npm start
 ```
 
 Before doing this, contact me to get the '_URI_' to the **DB** that I saved in a `.env` file of course not saved in _version control_.
+
+## Help
+
+In this repo can be found everything helpful to use this website:
+
+- [here](./.github/Test%20d'ingresso%2001%20-%20English,%20problem%20solving,%20coding%20quality,%20TDD.pdf) can be found the specifics of the projects
+- [here](./.github/userGuide.pdf) can be found the user guide
+- and below you can find a video of the website working
 
 https://github.com/AlessandroMuscio/regesta-dev-candidate-assessment/assets/56693783/57aa2f37-2769-48a2-90de-f748f820de68
