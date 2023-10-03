@@ -85,4 +85,4 @@ In this repo can be found everything helpful to use this website:
 - [here](./.github/userGuide.pdf) can be found the user guide
 - and below you can find a video of the website working
 
-https://github.com/AlessandroMuscio/regesta-dev-candidate-assessment/assets/56693783/57aa2f37-2769-48a2-90de-f748f820de68
+https://github.com/AlessandroMuscio/regesta-dev-candidate-assessment/assets/56693783/8d79c9d9-8af0-422c-8ba7-53a52707cfb7
